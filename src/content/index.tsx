@@ -63,15 +63,16 @@ function initLexiLens(): void {
   widgetStyles.textContent = `
     :host {
       all: initial;
-      font-family: 'Inter', system-ui, -apple-system, sans-serif;
     }
     
     .widget-container {
       pointer-events: auto;
+      font-family: 'OpenDyslexic', 'Comic Sans MS', Arial, sans-serif;
     }
     
     * {
       box-sizing: border-box;
+      font-family: inherit;
     }
   `;
   shadowRoot.appendChild(widgetStyles);

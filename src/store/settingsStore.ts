@@ -69,6 +69,9 @@ export const useSettingsStore = create<SettingsStore>((set, get) => ({
     if (partial.irisFocus) {
       newVisualAids.irisFocus = { ...current.irisFocus, ...partial.irisFocus };
     }
+    if (partial.handFocus) {
+      newVisualAids.handFocus = { ...current.handFocus, ...partial.handFocus };
+    }
     
     const newSettings = {
       ...get().settings,

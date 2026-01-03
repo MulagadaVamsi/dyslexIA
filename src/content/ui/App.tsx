@@ -21,6 +21,9 @@ import {
   enableIrisFocus,
   updateIrisFocus,
   disableIrisFocus,
+  enableHandFocus,
+  updateHandFocus,
+  disableHandFocus,
 } from '../modifiers';
 import { enableClickToRead, disableClickToRead } from '@/utils/speech';
 
@@ -96,6 +99,13 @@ export const App: React.FC = () => {
       disableIrisFocus();
     }
 
+    // Hand Focus (Hand Tracking)
+    if (settings.visualAids.handFocus.enabled) {
+      enableHandFocus(settings.visualAids.handFocus);
+    } else {
+      disableHandFocus();
+    }
+
     // Click to Read
     if (settings.audio.clickToRead) {
       enableClickToRead(settings.audio);
@@ -124,6 +134,11 @@ export const App: React.FC = () => {
     if (isLoading || !settings.enabled) return;
     updateIrisFocus(settings.visualAids.irisFocus);
   }, [settings.visualAids.irisFocus, isLoading, settings.enabled]);
+
+  useEffect(() => {
+    if (isLoading || !settings.enabled) return;
+    updateHandFocus(settings.visualAids.handFocus);
+  }, [settings.visualAids.handFocus, isLoading, settings.enabled]);
 
   // Listen for extension messages (including Summarize)
   useEffect(() => {

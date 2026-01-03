@@ -38,7 +38,7 @@
   ],
   "web_accessible_resources": [
     {
-      "resources": ["fonts/*", "icons/*"],
+      "resources": ["fonts/*", "icons/*", "hand-driver.js", "iris-driver.js", "webgazer.js", "mediapipe/*"],
       "matches": ["<all_urls>"]
     }
   ]

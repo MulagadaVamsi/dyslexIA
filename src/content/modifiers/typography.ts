@@ -16,7 +16,7 @@ const CSS_VARS = {
 /**
  * Font family mappings with fallbacks
  */
-const FONT_STACKS: Record<TypographySettings['fontFamily'], string> = {
+export const FONT_STACKS: Record<TypographySettings['fontFamily'], string> = {
   'OpenDyslexic': '"OpenDyslexic", "Comic Sans MS", Arial, sans-serif',
   'Arial': 'Arial, Helvetica, sans-serif',
   'Verdana': 'Verdana, Geneva, sans-serif',

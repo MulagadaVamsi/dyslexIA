@@ -7,3 +7,5 @@ export * from './focusMode';
 export * from './bionicReading';
 export * from './syllableSplitter';
 export * from './irisFocus';
+export * from './handFocus';
+

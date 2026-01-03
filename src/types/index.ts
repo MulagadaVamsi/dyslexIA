@@ -32,11 +32,18 @@ export interface IrisFocusSettings {
   spotlightRadius: number;
 }
 
+export interface HandFocusSettings {
+  enabled: boolean;
+  spotlightRadius: number;
+  blurAmount: number;
+}
+
 export interface VisualAidsSettings {
   readingRuler: ReadingRulerSettings;
   screenTint: ScreenTintSettings;
   focusMode: FocusModeSettings;
   irisFocus: IrisFocusSettings;
+  handFocus: HandFocusSettings;
 }
 
 export interface BionicReadingSettings {
@@ -101,6 +108,11 @@ export const DEFAULT_SETTINGS: LexiLensSettings = {
     irisFocus: {
       enabled: false,
       spotlightRadius: 150,
+    },
+    handFocus: {
+      enabled: false,
+      spotlightRadius: 180,
+      blurAmount: 6,
     },
   },
   cognitive: {

@@ -169,6 +169,42 @@ export const VisualAidsSection: React.FC = () => {
         )}
       </div>
 
+      {/* Hand Focus (Hand Tracking) */}
+      <div className="space-y-3 p-3 rounded-xl bg-surface-800/30">
+        <Toggle
+          label="Hand Focus"
+          description="Point with your finger to focus (Hand Tracking)"
+          checked={visualAids.handFocus.enabled}
+          onChange={(enabled) => updateVisualAids({ handFocus: { enabled } })}
+        />
+        
+        {visualAids.handFocus.enabled && (
+          <div className="space-y-3 pt-2 pl-2 border-l-2 border-primary-500/30">
+            <Slider
+              label="Spotlight Radius"
+              value={visualAids.handFocus.spotlightRadius}
+              min={100}
+              max={400}
+              step={10}
+              unit="px"
+              onChange={(spotlightRadius) => updateVisualAids({ handFocus: { spotlightRadius } })}
+            />
+            <Slider
+              label="Blur Amount"
+              value={visualAids.handFocus.blurAmount}
+              min={2}
+              max={15}
+              step={1}
+              unit="px"
+              onChange={(blurAmount) => updateVisualAids({ handFocus: { blurAmount } })}
+            />
+            <p className="text-xs text-white/50 italic">
+              Point with your index finger to control the focus area
+            </p>
+          </div>
+        )}
+      </div>
+
       {showCalibration && (
         <CalibrationModal 
           onClose={() => setShowCalibration(false)}

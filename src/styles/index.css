@@ -2,10 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-/* OpenDyslexic font face - will be loaded from extension assets */
+/* OpenDyslexic font face - loaded from CDN */
 @font-face {
   font-family: 'OpenDyslexic';
-  src: url('chrome-extension://__MSG_@@extension_id__/fonts/OpenDyslexic-Regular.woff2') format('woff2');
+  src: url('https://cdn.jsdelivr.net/npm/open-dyslexic@1.0.3/woff2/OpenDyslexic-Regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -13,10 +13,19 @@
 
 @font-face {
   font-family: 'OpenDyslexic';
-  src: url('chrome-extension://__MSG_@@extension_id__/fonts/OpenDyslexic-Bold.woff2') format('woff2');
+  src: url('https://cdn.jsdelivr.net/npm/open-dyslexic@1.0.3/woff2/OpenDyslexic-Bold.woff2') format('woff2');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
+}
+
+/* Force OpenDyslexic font globally for extension UI */
+html, body {
+  font-family: 'OpenDyslexic', 'Comic Sans MS', Arial, sans-serif !important;
+}
+
+* {
+  font-family: inherit;
 }
 
 /* Custom scrollbar for the widget */
@@ -56,3 +65,46 @@
     border: 1px solid rgba(0, 0, 0, 0.1);
   }
 }
+
+/* Color picker hue slider */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Color input styling */
+input[type="color"] {
+  -webkit-appearance: none;
+  padding: 0;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+  border-radius: 6px;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+}
+

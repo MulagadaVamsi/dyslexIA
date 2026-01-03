@@ -45,7 +45,7 @@ export default {
       },
       fontFamily: {
         dyslexic: ['OpenDyslexic', 'Comic Sans MS', 'Arial', 'sans-serif'],
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['OpenDyslexic', 'Comic Sans MS', 'Arial', 'sans-serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.2s ease-out',

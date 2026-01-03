@@ -26,7 +26,7 @@
   "content_scripts": [
     {
       "js": [
-        "assets/index.tsx-loader-OkEIeVq7.js"
+        "assets/index.tsx-loader-BaCg-R0d.js"
       ],
       "matches": [
         "<all_urls>"
@@ -48,9 +48,13 @@
       "resources": [
         "fonts/*",
         "icons/*",
+        "hand-driver.js",
+        "iris-driver.js",
+        "webgazer.js",
+        "mediapipe/*",
         "assets/client-C3Mcq2Xm.js",
-        "assets/storage-CorQoHda.js",
-        "assets/index.tsx-Cbb-jq7-.js"
+        "assets/storage-D6yWssag.js",
+        "assets/index.tsx-Cvu8xy4E.js"
       ],
       "use_dynamic_url": false
     }
