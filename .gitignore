@@ -3,8 +3,7 @@ node_modules/
 .node_runtime/
 
 # Build output
-dist/
-*.zip
+# dist and zip are now allowed as requested
 
 # Logs
 build_log.txt
